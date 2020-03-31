@@ -371,7 +371,7 @@ class TransferObject(object):
         self.setMetadata("version", "1.0.0")
         self.setMetadata("references", references)
         self.setMetadata("mayaVersion", maya.cmds.about(v=True))
-        self.setMetadata("mayaSceneFile", maya.cmds.file(q=True, sn=True))
+        self.setMetadata("sourceFile", maya.cmds.file(q=True, sn=True))
 
         # Move the metadata information to the top of the file
         metadata = {"metadata": self.metadata()}
