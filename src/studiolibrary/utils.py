@@ -577,6 +577,8 @@ def formatPath(formatString, path="", **kwargs):
 
     kwargs.update(os.environ)
 
+    work_root = os.path.expandvars("%P4WORKROOT%/%P4BRANCH%/%GG_PROJECT%/Assets/Work_Files")
+
     labels = {
         "name": name,
         "path": path,
@@ -587,6 +589,8 @@ def formatPath(formatString, path="", **kwargs):
         "local": local,
         "dirname": dirname,
         "extension": extension,
+
+        "work": work_root,
     }
 
     kwargs.update(labels)
@@ -1556,10 +1560,10 @@ def testFormatPath():
 
     :rtype: None 
     """
-    formatString = "{dirname}/versions/{name}{extension}"
+    formatString = "{dirname}/vesions/{name}{extension}"
 
     result = formatPath(formatString, path="P:/production/rigs/database.json")
-    expected = "P:/production/rigs/versions/database.json"
+    expected = "P:/production/rigs/vesions/database.json"
 
     msg = "Data does not match {} {}".format(expected, result)
     assert expected == result, msg
