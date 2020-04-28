@@ -126,7 +126,7 @@ class BaseItem(studiolibrary.LibraryItem):
         :rtype: str
         """
         if self.TRANSFER_BASENAME:
-            return os.path.join(self.path(), self.TRANSFER_BASENAME)
+            return os.path.join(self.path(), self.TRANSFER_BASENAME).replace("\\","/")
         else:
             return self.path()
 

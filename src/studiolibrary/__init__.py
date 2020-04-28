@@ -28,3 +28,5 @@ from studiolibrary.utils import *
 from studiolibrary.library import Library
 from studiolibrary.libraryitem import LibraryItem
 from studiolibrary.main import main
+
+setDebugMode(True)

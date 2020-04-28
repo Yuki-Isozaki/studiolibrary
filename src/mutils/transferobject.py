@@ -356,7 +356,7 @@ class TransferObject(object):
         :type path: str
         :rtype: None
         """
-        logger.info("Saving pose: %s" % path)
+        logger.info("Saving transferObject: %s" % path)
 
         encoding = locale.getpreferredencoding()
         user = getpass.getuser()
@@ -389,7 +389,7 @@ class TransferObject(object):
         with open(path, "w") as f:
             f.write(str(data))
 
-        logger.info("Saved pose: %s" % path)
+        logger.info("Saved transferObject: %s" % path)
 
     def dump(self, data=None):
         """

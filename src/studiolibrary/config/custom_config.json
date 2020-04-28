@@ -56,9 +56,9 @@
     // "studiolibrarymaya.exampleitem.ExampleItem",
     // The maya file item is in development
     
-    // "studiolibrarymaya.modelitem.ModelItem",
+    "studiolibrarymaya.modelitem.ModelItem",
 
-    "studiolibrarymaya.mayafileitem.MayaFileItem",
+    // "studiolibrarymaya.mayafileitem.MayaFileItem",
     "studiolibrarymaya.poseitem.PoseItem",
     "studiolibrarymaya.animitem.AnimItem",
     "studiolibrarymaya.mirroritem.MirrorItem",
@@ -68,6 +68,6 @@
   ],
 
   // Used for very basic analytics and does not send any personal information
-  "analyticsEnabled": true,
+  "analyticsEnabled": false,
   "analyticsId": "UA-50172384-1"
 }

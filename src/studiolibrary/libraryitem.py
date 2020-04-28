@@ -644,13 +644,15 @@ class LibraryItem(studiolibrary.widgets.Item):
             else:
                 self.showAlreadyExistsDialog()
 
-        tmp = studiolibrary.createTempPath(self.__class__.__name__)
+        tmp = studiolibrary.createTempPath(os.path.basename(dst))
 
         self.setPath(tmp)
+        logger.debug(u'Set Path: {0}'.format(tmp))
 
         self.save(*args, **kwargs)
 
         shutil.move(tmp, dst)
+        logger.debug(u'Move TempFile: {0}'.format(dst))
 
         self.setPath(dst)
         self.syncItemData()
